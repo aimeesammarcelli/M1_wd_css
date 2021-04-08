@@ -44,7 +44,7 @@
   
   
   a{
-    font-family: SF-Pro-Display,sans-serif;
+   font-family: SF-Pro-Display,sans-serif;
    font-weight: 300;
    font-size: 16px;
    text-decoration: none;
@@ -67,7 +67,7 @@
   .abcontainer{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) ;
-    grid-template-rows: repeat(auto-fit, minmax(200px, 1fr)) ;
+    grid-auto-rows: minmax(200px, 1fr);
     grid-gap: 40px;
     margin:20px;
     
@@ -136,14 +136,17 @@
     @keyframes loader {
       0%{
         opacity: 1;
+        z-index: 999;
       }
 
       99%{
         opacity: 1;
+        z-index: 999;
       }
 
       100%{
         opacity: 0;
+        z-index: -999;
       }
     }
     
@@ -154,5 +157,16 @@
       
       100% {
         font-variation-settings: 'wght' 100, 'wdth' 85;
+      }
+    }
+
+
+    // Responsive
+
+    @media screen and (max-width: 640px) {
+      .abcontainer {
+        div{
+          padding: 10vw;
+        }
       }
     }
