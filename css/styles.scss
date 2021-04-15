@@ -87,7 +87,7 @@
   
     body{
       background-color: var(--black);
-      animation: scroll 5s;
+      animation: scroll 11s;
       animation-fill-mode: forwards;
     }
     
@@ -98,22 +98,23 @@
     .load{
       width: 100vw;
       height: 100vh;
-      background-color: white;
       position: absolute;
       margin-top: -20px;
-      animation: loader 5s;
+      animation: loader 11s;
       animation-fill-mode: forwards;
 
 
-      h1, p{
-        text-align: center;
-        top: 40%;
-        position: relative;
-        padding-bottom: 10px;
+      img{
+        display:flex;
+        margin-left:auto;
+        margin-right:auto;
+        max-width:100%;
       }
       
 
     }
+
+
   
     /* Animations */
 
@@ -159,6 +160,7 @@
         font-variation-settings: 'wght' 100, 'wdth' 85;
       }
     }
+
 
 
     // Responsive
